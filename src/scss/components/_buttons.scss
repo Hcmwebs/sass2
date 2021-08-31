@@ -1,0 +1,48 @@
+@use'../abstracts'as *;
+/* buttons */
+.btn {
+  cursor: pointer;
+  color: $white;
+  background: $primary-500;
+  border: transparent;
+  border-radius: $borderRadius;
+  letter-spacing: $letterSpacing;
+  padding: 0.375rem 0.75rem;
+  box-shadow:$shadow-1;
+  transition:$transition;
+  text-transform: capitalize;
+  display: inline-block;
+
+  &:hover {
+    background: $primary-700;
+    box-shadow: $shadow-3;
+  }
+  &-hipster {
+    color: $primary-500;
+    background: $primary-200;
+    &:hover {
+      color: $primary-200;
+      background: $primary-700;
+    }
+  }
+  &-block {
+    width: 100%;
+  } /*block class is good with forms*/
+}
+
+/* alerts */
+.alert {
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border-color: transparent;
+  border-radius: $borderRadius;
+}
+
+.alert-errors {
+  color: $red-dark;
+  background: $red-light;
+}
+.alert-success {
+  color: $green-dark;
+  background: $green-light;
+}

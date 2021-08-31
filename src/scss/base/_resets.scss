@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+@use './typo' as *;
+@use '../components' as *;
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  max-width: $maxWidth;
+}

@@ -1,0 +1,17 @@
+/* alerts  onloading animations */
+@use'./colors' as *;
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  border: 5px solid $grey-400;
+  border-radius: 50%;
+  border-top-color: $primary-500;
+  animation: spinner 0.6s linear infinite;
+}
