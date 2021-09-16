@@ -2,6 +2,7 @@
 /* titles */
 
 .title {
+  margin: $margin+1rem;
   text-align: center;
 }
 
@@ -10,6 +11,5 @@
   width: 7rem;
   height: 0.25rem;
   margin: 0 auto;
-  margin-top: -1rem;
+  margin-top: 1rem;
 }
-

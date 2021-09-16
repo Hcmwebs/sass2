@@ -1,11 +1,27 @@
+@use './colors' as *;
+@use './variables' as *;
+
 @mixin grid($placeItems) {
   display: grid;
   place-items: $placeItems;
 }
 
-@mixin flex($direction,$justify,$align){
+@mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin btn($bg-color: #e2e2e2) {
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  padding: $padding $padding * 2;
+  border-radius: $borderRadius;
+  box-shadow: $shadow-1;
+  background-color: $bg-color;
+
 }

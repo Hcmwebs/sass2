@@ -47,8 +47,8 @@ function cacheBustTask() {
 
 function watchTask() {
   watch(
-    [files.scssPath, files.jsPath],
-    parallel(scssTask, jsTask, cacheBustTask)
+    [files.scssPath, files.jsPath, files.htmlPath],
+    parallel(scssTask, jsTask, cacheBustTask),
   );
 }
 

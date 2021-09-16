@@ -1,5 +1,6 @@
 /* alerts  onloading animations */
-@use'./colors' as *;
+@use './variables' as *;
+
 @keyframes spinner {
   to {
     transform: rotate(360deg);
