@@ -1,4 +1,7 @@
 @use '../abstracts' as *;
-.card{
-  
+.card {
+  display: block;
+  padding: $padding;
+  box-shadow: $shadow-4;
+  border: $borderThickness solid #ddd;
 }
