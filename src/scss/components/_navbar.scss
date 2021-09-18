@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+%flex-layout {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar {
+  @extend %flex-layout;
+  padding: $padding $padding * 2;
+  box-shadow: $shadow-1;
+
+  .site-title {
+    font-size: $fontSize-lg;
+  }
+  .container {
+    @extend %flex-layout;
+  }
+}
+
+@each $key, $val in $colors {
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val;
+  }
+}
