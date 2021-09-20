@@ -8,6 +8,7 @@ const replace = require('gulp-replace');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
+const purgecss = require('gulp-purgecss');
 
 // File path Variables
 const files = {
@@ -22,6 +23,7 @@ function scssTask() {
   return src(files.scssPath)
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(purgecss({ content: [files.htmlPath] }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/css'));
@@ -33,6 +35,12 @@ function jsTask() {
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(dest('dist/js'));
+}
+
+//Images jsTask
+
+function imgTask() {
+  return src(files.imgPath).pipe(dest('dist/images'));
 }
 
 // Cachebusting  task
@@ -47,11 +55,14 @@ function cacheBustTask() {
 
 function watchTask() {
   watch(
-    [files.scssPath, files.jsPath, files.htmlPath],
-    parallel(scssTask, jsTask, cacheBustTask),
+    [files.scssPath, files.jsPath, files.htmlPath, files.imgPath],
+    parallel(scssTask, jsTask, imgTask, cacheBustTask),
   );
 }
 
 // Default task
 
-exports.default = series(parallel(scssTask, jsTask, cacheBustTask), watchTask);
+exports.default = series(
+  parallel(scssTask, jsTask, imgTask, cacheBustTask),
+  watchTask,
+);

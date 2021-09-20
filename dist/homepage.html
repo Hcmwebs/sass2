@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalise.css" />
-    <link rel="stylesheet" href="css/styles.css?cb=1632001078140" />
+    <link rel="stylesheet" href="css/styles.css?cb=1632101549213" />
     <title>Homepage | Sass library Test page</title>
   </head>
   <body>
@@ -14,11 +14,15 @@
       <div class="container">
         <h1 class="m-0 site-title">Sass Library</h1>
         <ul class="display-f">
-          <li class="ml-1 text-hover-secondary">
-            <a href="#work">Our Work</a>
+          <li class="ml-1">
+            <a href="#work" class="text-black text-hover-secondary">
+              Our Work</a
+            >
           </li>
-          <li class="ml-1 text-hover-secondary">
-            <a href="#about">About us</a>
+          <li class="ml-1">
+            <a href="#about" class="text-black text-hover-secondary"
+              >About us</a
+            >
           </li>
         </ul>
       </div>
@@ -26,10 +30,108 @@
 
     <!-- intro -->
 
+    <div class="container mt-5">
+      <div class="row justify-center">
+        <div class="col-12-xs col-5-md">
+          <h2 class="m-0">
+            <div class="font-xxl">Black-belt</div>
+            <div class="font-xxl text-secondary">Your Website</div>
+          </h2>
+          <p class="text-gray mt-2 mb-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam,
+            sed.
+          </p>
+          <a
+            href="#work"
+            class="btn-outlined-secondary text-secondary text-hover-white"
+            >View Our Work</a
+          >
+        </div>
+        <div class="col-12-xs col-5-md">
+          <img src="./images/laptop.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- about section -->
+    <section id="about" class="bg-secondary-light-9 mt-5 pt-4 pb-4">
+      <div class="container">
+        <h2 class="mb-2">About Sass Library</h2>
+        <p class="m-0">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+          sequi corrupti sed non ducimus illo ex dolorum nobis culpa modi? Totam
+          rem ipsa a dolorem ex accusantium maiores quis modi.Lorem ipsum dolor,
+          sit amet consectetur adipisicing elit. Voluptatum sequi corrupti sed
+          non ducimus illo ex dolorum nobis culpa modi? Totam rem ipsa a dolorem
+          ex accusantium maiores quis modi.
+        </p>
+        <p class="mt-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rem,
+          labore minus doloremque beatae fugit ab possimus laborum! Officia,
+          commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+          rem, labore minus doloremque beatae fugit ab possimus laborum!
+          Officia, commodi.
+        </p>
+      </div>
+    </section>
+
     <!-- work section -->
+    <section id="work" class="mt-5">
+      <div class="container">
+        <h2 class="mb-2">Some of our Work</h2>
+        <div class="row gap-2">
+          <div class="col-12-xs col-6-md col-3-lg">
+            <div class="card p-0">
+              <h3 class="card-title m-1">Mario Club</h3>
+              <img src="./images/mario.png" class="img" alt="" />
+              <p class="m-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis, error!
+              </p>
+            </div>
+          </div>
+          <div class="col-12-xs col-6-md col-3-lg">
+            <div class="card p-0">
+              <h3 class="card-title m-1">Foodies</h3>
+              <img src="./images/food.png" alt="" class="img" />
+              <p class="m-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis, error!
+              </p>
+            </div>
+          </div>
+          <div class="col-12-xs col-6-md col-3-lg">
+            <div class="card p-0">
+              <h3 class="card-title m-1">Marmities</h3>
+              <img src="./images/marmite.png" alt="" class="img" />
+              <p class="m-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis, error!
+              </p>
+            </div>
+          </div>
+          <div class="col-12-xs col-6-md col-3-lg">
+            <div class="card p-0">
+              <h3 class="card-title m-1">Notes</h3>
+              <img src="./images/notes.png" alt="" class="img" />
+              <p class="m-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis, error!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-center mt-2">
+          <button class="btn-secondary text-white font-md">View All</button>
+        </div>
+      </div>
+    </section>
 
     <!-- footer -->
+    <footer class="bg-gray-light-7 pt-3 pb-3 mt-5">
+      <div class="container">copyright 2021 Css Library | Sass Designs</div>
+    </footer>
 
-    <script src="js/main.js?cb=1632001078140"></script>
+    <script src="js/main.js?cb=1632101549213"></script>
   </body>
 </html>
